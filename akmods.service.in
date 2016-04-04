@@ -1,0 +1,14 @@
+[Unit]
+Description=Builds and install new kmods from akmod packages
+Before=@SERVICE@
+
+[Service]
+Type=oneshot
+RemainAfterExit=true
+ExecStart=/usr/sbin/akmods --from-init
+# Make sure we load the nvidia module if built on startup, otherwise X will
+# fail. Harmless if not needed.
+ExecStart=-/usr/sbin/modprobe -q nvidia
+
+[Install]
+WantedBy=multi-user.target
