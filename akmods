@@ -36,7 +36,7 @@
 
 # global vars
 myprog="akmods"
-myver="0.5.5"
+myver="0.5.6"
 kmodlogfile=
 continue_line=""
 tmpdir=
