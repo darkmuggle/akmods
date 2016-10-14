@@ -6,9 +6,6 @@ Before=@SERVICE@
 Type=oneshot
 RemainAfterExit=true
 ExecStart=/usr/sbin/akmods --from-init
-# Make sure we load the nvidia module if built on startup, otherwise X will
-# fail. Harmless if not needed.
-ExecStartPost=-/usr/sbin/modprobe -q nvidia
 
 [Install]
 WantedBy=multi-user.target
