@@ -4,7 +4,7 @@ Before=@SERVICE@
 
 [Service]
 Type=oneshot
-RemainAfterExit=true
+RemainAfterExit=yes
 ExecStart=/usr/sbin/akmods --from-init
 
 [Install]
